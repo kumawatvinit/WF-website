@@ -2,27 +2,33 @@ version = 1
 
 [[analyzers]]
 name = "shell"
-enabled = true
 
 [[analyzers]]
 name = "javascript"
-enabled = true
 
   [analyzers.meta]
-  plugins = ["vue"]
+  plugins = [
+    "react",
+    "vue",
+    "ember",
+    "meteor",
+    "angularjs",
+    "angular"
+  ]
+  environment = [
+    "nodejs",
+    "browser",
+    "jest",
+    "mocha",
+    "jasmine",
+    "jquery",
+    "mongo",
+    "cypress",
+    "vitest"
+  ]
 
 [[analyzers]]
 name = "python"
-enabled = true
 
   [analyzers.meta]
   runtime_version = "3.x.x"
-  max_line_length = 119
-
-exclude_patterns = [
-  "**/migrations/*"
-]
-
-[[analyzers]]
-name = "test-coverage"
-enabled = false
